@@ -1,0 +1,27 @@
+.pointer {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.scrollY {
+    overflow-y: scroll;
+}
+
+.scrollX {
+    overflow-x: scroll;
+}
+
+/* special selectors */
+.oddDarken:nth-child(even) {
+    background:linear-gradient(
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.2)
+    );
+}
+
+.silverPlaceholder::-webkit-input-placeholder {
+    color: #f0f2f5;
+}

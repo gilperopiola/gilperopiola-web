@@ -1,0 +1,99 @@
+.inline {
+    display: inline;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+/* position fixed */
+.left0 {
+    position: fixed;
+    left: 0;
+}
+.right0 {
+    position: fixed;
+    right: 0;
+}
+.top0 {
+    position: fixed;
+    top: 0;
+}
+.bottom0 {
+    position: fixed;
+    bottom: 0;
+}
+
+.right24 {
+    position: fixed;
+    right: 24px;
+} 
+
+.bottom24 {
+    position: fixed;
+    bottom: 24px;
+} 
+
+.top64 {
+    position: fixed;
+    top: 64px;
+}
+
+/* distance */
+.z1 {
+    z-index: 1;
+}
+
+.z2 {
+    z-index: 2;
+}
+
+.z5 {
+    z-index: 5;
+}
+
+.z10 {
+    z-index: 10;
+}
+
+/* vertical-align */
+.valignBottom {
+    vertical-align: bottom;
+}
+
+.valignMiddle {
+    vertical-align: middle;
+}
+
+.valignTop {
+    vertical-align: top;
+}
+
+.alignVertical {
+    display:flex;
+    align-items:center; 
+}

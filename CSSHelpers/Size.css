@@ -1,0 +1,129 @@
+.fullWidth {
+    width: 100%;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.fourFifthsWidth {
+    width: 80%;
+}
+
+.fourFifthsHeight {
+    height: 80%;
+}
+
+.threeQuartersWidth {
+    width: 75%;
+}
+
+.threeQuartersHeight {
+    height: 75%;
+}
+
+.twoThirdsWidth {
+    width: 66%;
+}
+
+.twoThirdsHeight {
+    height: 66%;
+}
+
+.halfWidth {
+    width: 50%;
+}
+
+.halfHeight {
+    height: 50%;
+}
+
+.thirdWidth {
+    width: 33.3%;
+}
+
+.thirdHeight {
+    height: 33.3%;
+}
+
+.quarterWidth {
+    width: 25%;
+}
+
+.quarterHeight {
+    height: 25%;
+}
+
+.fifthWidth {
+    width: 20%;
+}
+
+.fifthHeight {
+    height: 20%;
+}
+
+.width40 {
+    width: 40px;
+}
+
+.width50 {
+    width: 50px;
+}
+
+.width60 {
+    width: 60px;
+}
+
+.height8 {
+    height: 8px;
+}
+
+.height40 {
+    height: 40px;
+}
+
+.height50 {
+    height: 50px;
+}
+
+.height60 {
+    height: 60px;
+}
+
+.height80 {
+    height: 80px;
+}
+
+.height100 {
+    height: 100px;
+}
+
+.minHeight80 {
+    min-height: 80px;
+}
+
+.maxWidth300 {
+    max-width: 300px;
+}
+
+/* borders */
+
+.noBorder {
+    border: none;
+}
+
+.noRadius {
+    border-radius: 0;
+}
+
+.square {
+    border-radius: 0;
+}
+
+.round {
+    border-radius: 4px;
+}
+
+.minHeight200 {
+    min-height: 200px;
+}

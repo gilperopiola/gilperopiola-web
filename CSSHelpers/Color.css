@@ -1,0 +1,346 @@
+/* lyfe companyon color schema */
+
+/* primary: #2cbcb2 */
+/* secondary: #f3ae27 */
+/* tertiary: #242021 */
+/* quaternary: #31a015 */
+
+.primary {
+    color: #2cbcb2;
+}
+
+.primaryBack {
+    background-color: #2cbcb2;
+}
+
+.primaryBorder {
+    border-color: #2cbcb2;
+}
+
+.primaryHover:hover {
+    color: #2cbcb2;
+}
+
+.primaryBackHover:hover {
+    background-color: #2cbcb2;
+}
+
+.secondary {
+    color: #f3ae27;
+}
+
+.secondaryBack {
+    background-color: #f3ae27;
+}
+.secondaryHover:hover {
+    color: #f3ae27;
+}
+
+.secondaryBackHover:hover {
+    background-color: #f3ae27;
+}
+
+.secondaryBorder {
+    border-color: #f3ae27;
+}
+
+.tertiary {
+    color: #242021;
+}
+
+.tertiaryBack {
+    background-color: #242021;
+}
+
+.tertiaryHover:hover {
+    color: #242021;
+}
+
+.tertiaryBackHover:hover {
+    background-color: #242021;
+}
+
+.tertiaryBorder {
+    border-color: #242021;
+}
+
+.quaternary {
+    color: #31a015;
+}
+
+.quaternaryBack {
+    background-color: #31a015;
+}
+
+.quaternaryHover:hover {
+    color: #31a015;
+}
+
+.quaternaryBackHover:hover {
+    background-color: #31a015;
+}
+
+.quaternaryBorder {
+    border-color: #31a015;
+}
+
+.quinary {
+    color: #e48c58;
+}
+
+.quinaryBack {
+    background-color: #e48c58;
+}
+.quinaryHover:hover {
+    color: #e48c58;
+}
+
+.quinaryBackHover:hover {
+    background-color: #e48c58;
+}
+
+.quinaryBorder {
+    border-color: #e48c58;
+}
+
+/* general */
+
+.white {
+    color: white;
+}
+
+.whiteImportant {
+    color: white!important;
+}
+
+.whiteBack {
+    background-color: white;
+}
+.whiteHover:hover {
+    color: white;
+}
+
+.whiteBackHover:hover {
+    background-color: white;
+}
+
+.whiteBorder {
+    border-color: white;
+}
+
+.gray {
+    color: gray;
+}
+
+.grayBack {
+    background-color: gray;
+}
+.grayHover:hover {
+    color: gray;
+}
+
+.grayBackHover:hover {
+    background-color: gray;
+}
+
+.grayBorder {
+    border-color: gray;
+}
+
+.darkGray {
+    color: #484848;
+}
+
+.darkGrayBack {
+    background-color: #484848;
+}
+.darkGrayHover:hover {
+    color: #484848;
+}
+
+.darkGrayBackHover:hover {
+    background-color: #484848;
+}
+
+.darkGrayBorder {
+    border-color: #484848;
+}
+
+.black {
+    color: black;
+}
+
+.blackBack {
+    background-color: black;
+}
+.blackHover:hover {
+    color: black;
+}
+
+.blackBackHover:hover {
+    background-color: black;
+}
+
+.blackBorder {
+    border-color: black;
+}
+
+.red {
+    color: red;
+}
+
+.redBack {
+    background-color: red;
+}
+.redHover:hover {
+    color: red;
+}
+
+.redBackHover:hover {
+    background-color: red;
+}
+
+.lightRed {
+    color: #f74949;
+}
+
+.lightRedBack {
+    background-color: #f74949;
+}
+.lightRedHover:hover {
+    color: #f74949;
+}
+
+.lightRedBackHover:hover {
+    background-color: #f74949;
+}
+
+.darkRed {
+    color: #b10000;
+}
+
+.darkRedBack {
+    background-color: #b10000;
+}
+.darkRedHover:hover {
+    color: #b10000;
+}
+
+.darkRedBackHover:hover {
+    background-color: #b10000;
+}
+
+.brownishRed {
+    color: #a91a1a;
+}
+
+.brownishRedBack {
+    background-color: #a91a1a;
+}
+
+.green {
+    color: green;
+}
+
+.greenBack {
+    background-color: green;
+}
+.greenHover:hover {
+    color: green;
+}
+
+.greenBackHover:hover {
+    background-color: green;
+}
+
+.lightGreen {
+    color: #3fc327;
+}
+
+.lightGreenBack {
+    background-color: #3fc327;
+}
+.lightGreenHover:hover {
+    color: #3fc327;
+}
+
+.lightGreenBackHover:hover {
+    background-color: #3fc327;
+}
+
+.darkGreen {
+    color: #1a4d1a;
+}
+
+.darkGreenBack {
+    background-color: #1a4d1a;
+}
+.darkGreenHover:hover {
+    color: #1a4d1a;
+}
+
+.darkGreenBackHover:hover {
+    background-color: #1a4d1a;
+}
+
+.lime {
+    color: greenyellow;
+}
+
+.limeBack {
+    background-color: greenyellow;
+}
+.limeHover:hover {
+    color: greenyellow;
+}
+
+.limeBackHover:hover {
+    background-color: greenyellow;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.yellowBack {
+    background-color: yellow;
+}
+
+.orange {
+    color: orange;
+}
+
+.orangeBack {
+    background-color: orange;
+}
+
+.blue {
+    color: blue;
+}
+
+.blueBack {
+    background-color: blue;
+}
+
+.lightBlue {
+    color: #5faeff;
+}
+
+.lightBlueBack {
+    background-color: #5faeff;
+}
+
+.silver {
+    color: #f0f2f5;
+}
+
+.silverBack {
+    background-color: #f0f2f5;
+}
+.silverHover:hover {
+    color: #f0f2f5;
+}
+
+.silverBackHover:hover {
+    background-color: #f0f2f5;
+}

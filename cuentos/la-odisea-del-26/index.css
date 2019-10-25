@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+}
+
+body {
+	font-family: Fjalla One;
+    background-color: #ffa500; 
+    text-align: center;
+    margin: 0;
+    height: 100%;
+}
+
+.wholeScreen {
+    height: 100%;
+    background: url("background.jpg");
+    background-size: cover;
+}
+
+.title {
+    font-size: 148px;
+    line-height: 400%;
+    color: white;
+}
+
+.arrow {
+    display: block;
+    width: 12.5%;
+    margin: auto;
+}
+
+.paragraph {
+    font-size: 48px;
+    text-align: justify;
+    padding: 36px;
+    line-height: 1.4em;
+    color: #dedede;
+}
+
+.paragraph:nth-child(even) {
+    background-color: #db9a20;
+}
+
+.paragraph:nth-child(odd) {
+    background-color: #2e2a2a;
+}
+
+.signature {
+    font-size: 28px;
+    float: right;
+    color: #ff9d00;
+}
+
+
+@media screen and (max-width: 800px) {
+    .title {
+        font-size: 112px;
+        line-height: 550%;
+    }
+
+    .paragraph {
+        font-size: 32px;
+    }
+
+    .signature {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 82px;
+        line-height: 550%;
+    }
+
+    .paragraph {
+        font-size: 26px;
+    }
+}

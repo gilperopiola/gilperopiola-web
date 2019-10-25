@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="CSSHelpers/Color.css">
+  <link rel="stylesheet" type="text/css" href="CSSHelpers/Effects.css">
+  <link rel="stylesheet" type="text/css" href="CSSHelpers/Font.css">
+  <link rel="stylesheet" type="text/css" href="CSSHelpers/Misc.css">
+  <link rel="stylesheet" type="text/css" href="CSSHelpers/Position.css">
+  <link rel="stylesheet" type="text/css" href="CSSHelpers/Size.css">
+  <link rel="stylesheet" type="text/css" href="CSSHelpers/Space.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="BebasNeue.ttf" rel="stylesheet">
+  <link href="ComicSans.ttf" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>@gilperopiola</title>
+</head>
+
+<!------------------------------------------------------------------------------>
+
+<script>
+
+  let selectedTab = "CUENTOS"
+
+  $(document).ready(function () {
+
+    $('.entry').hover(function () {
+      let readLabel = $(this).children(".fifthWidth")
+      readLabel.fadeIn(150)
+    }, function () {
+      let readLabel = $(this).children(".fifthWidth")
+      readLabel.fadeOut(150)
+    })
+
+    $('.tab').hover(function () {
+      let classesArray = $(this).attr('class').split(/\s+/)
+
+      let selected = false
+      for (let i = 0; i < classesArray.length; i++) {
+        if (classesArray[i] === "tabSelected") {
+          selected = true
+        }
+      }
+
+      if (!selected) {
+        $(this).addClass("lightRed")
+        $(this).addClass("pointer")
+      }
+
+    }, function () {
+      $(this).removeClass("lightRed")
+      $(this).removeClass("pointer")
+    })
+
+    $('.tab').on("click", function () {
+      $('.tab').each(function () {
+        $(this).removeClass("tabSelected")
+        $(this).removeClass("pointer")
+      })
+
+      $(this).addClass("tabSelected")
+
+      selectedTab = $(this).text()
+
+      switch (selectedTab) {
+        case "CUENTOS":
+          $("#cuentos").show()
+          $("#poemas").hide()
+          $("#giladas").hide()
+          break
+        case "POEMAS":
+          $("#cuentos").hide()
+          $("#poemas").show()
+          $("#giladas").hide()
+          break
+        case "GILADAS":
+          $("#cuentos").hide()
+          $("#poemas").hide()
+          $("#giladas").show()
+          break
+      }
+    })
+  })
+
+</script>
+
+<!------------------------------------------------------------------------------>
+
+<body>
+  <div class="quarterHeight tertiaryBack alignVertical">
+    <h1 class="white fontEnormous marH32 left inlineBlock">GILPEROPIOLA</h1>
+
+    <div class="right fullWidth alignRight">
+      <h1 class="white fontHuge inlineBlock tab tabSelected">CUENTOS</h1>
+      <h1 class="white fontHuge marH32 inlineBlock tab">POEMAS</h1>
+      <h1 class="white fontHuge marRight40 inlineBlock tab">GILADAS</h1>
+    </div>
+  </div>
+
+  <div class="height8 fullWidth gradientEffect"></div>
+
+  <div id="cuentos">
+    <div onclick="window.location.assign('./cuentos/la-odisea-del-26')"
+      class="entry height80 alignVertical alignLeft pointer" style="background-color: #2e2a2a;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #ffa500;">LA ODISEA DEL 26</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+    <div onclick="window.location.assign('./cuentos/oral')" class="entry height80 alignVertical alignLeft pointer"
+      style="background-color: #f1f1f1;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #e21313;">ORAL</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right" style="color: #e21313;">LEER</h1>
+      </div>
+    </div>
+    <div onclick="window.location.assign('./cuentos/vladimir')" class="entry height80 alignVertical alignLeft pointer"
+      style="background-color: #7e0707;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #e49f9f;">VLADIMIR</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+    <div onclick="window.location.assign('./cuentos/para-mi-viejo-amor')"
+      class="entry height80 alignVertical alignLeft pointer" style="background-color: #32198f;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #f3ebeb;">PARA MI VIEJO AMOR</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+    <div onclick="window.location.assign('./cuentos/tiempo')" class="entry height80 alignVertical alignLeft pointer"
+      style="background-color: #541e77;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #dfdfdf;">TIEMPO</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+    <div onclick="window.location.assign('./cuentos/hada-la-desencajada')"
+      class="entry height80 alignVertical alignLeft pointer" style="background-color: #649ee0;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #302222;">HADA LA DESENCAJADA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+    <div onclick="window.location.assign('./cuentos/el-dia-que-etc')"
+      class="entry height80 alignVertical alignLeft pointer" style="background-color: #eb4a34;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #352020;">EL DÍA QUE SALÍ A CAGAR GENTE A PALOS CON
+        MI CANGURO STEVE
+      </h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+    <div onclick="window.location.assign('./cuentos/lilita-cacarrio')"
+      class="entry height80 alignVertical alignLeft pointer" style="background-color: #dfe231;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #161010;">LILITA
+        CACARRIÓ</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right" style="color: #161010;">LEER</h1>
+      </div>
+    </div>
+    <div onclick="window.location.assign('./cuentos/fasito-inca')"
+      class="entry height80 alignVertical alignLeft pointer" style="background-color: #3f9e3c;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #69320cf6;">FASITO INCA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="poemas">
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #ac1793;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #f8f8f8f6;">EL TERRIVIAJE</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #a58736;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #f8f8f8f6;">PRISIÓN DE TELA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #34be4b;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #236b2ff6;">LA MUJER TAUTOLOGÍA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #b13a16;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #3f0505f6;">LABIOS DE TUCA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #3b0f6d;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #f8f8f8f6;">DEVENIR</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #cc7dbf;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #000000f6;">CONI CONITA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #78ac17;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #0c0505f6;">SOY GILPEROPIOLA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #68295d;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #f8f8f8f6;">EL REINO DEL REINO DE PIPA NOVENA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #2b67b4;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #1f0a0af6;">CARLOTA LA GOTA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #db9442;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #632968f6;">NUDE DEL ALMA</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #979296;">
+      <h1 class="fontHuge marLeft16 fourFifthsWidth" style="color: #fffffff6;">A VECES ESCRIBO</h1>
+
+      <div class="alignRight fifthWidth" style="display: none">
+        <h1 class="fontMediumBig marRight16 right white">LEER</h1>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="giladas">
+
+  </div>
+
+</body>
+
+</html>

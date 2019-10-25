@@ -1,0 +1,73 @@
+.darken {
+    background:linear-gradient(
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1)
+    );
+}
+
+.translucent {
+    opacity: 0.7;
+}
+
+.shadowRight {
+    -webkit-box-shadow: 2px 0px 4px -1px rgba(51,51,51,1);
+    -moz-box-shadow: 2px 0px 4px -1px rgba(51,51,51,1);
+    box-shadow: 2px 0px 4px -1px rgba(51,51,51,1);
+}
+
+.shadowDown {
+    -webkit-box-shadow: 0px 3px 4px -1px rgba(51,51,51,1);
+    -moz-box-shadow: 0px 3px 4px -1px rgba(51,51,51,1);
+    box-shadow: 0px 3px 4px -1px rgba(51,51,51,1);
+}
+
+/* effects */
+.hoverEffect1:hover{
+    background-color: #5faeff;
+    color: white;
+    font-weight: bold;
+    transition: 0.125s;
+}
+
+.gradientEffect {
+    background: linear-gradient(270deg, #aa5af0, #342aff, #ff3b2a, #ffbe2a, #2aff83, #f895ff);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: GradientEffect 15s ease infinite;
+    -moz-animation: GradientEffect 15s ease infinite;
+    animation: GradientEffect 15s ease infinite;
+}
+
+.gradientEffect2 {
+    background: linear-gradient(270deg, #3a353e, #61169e);
+    background-size: 400% 400%;
+    
+    -webkit-animation: GradientEffect 5s ease infinite;
+    -moz-animation: GradientEffect 5s ease infinite;
+    animation: GradientEffect 5s ease infinite;
+}
+
+.gradientEffectDark {
+    background: linear-gradient(270deg, #3a353e, #61169e, #9e2116, #439e16, #1032af, #9e2d6a);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: GradientEffect 5s ease infinite;
+    -moz-animation: GradientEffect 5s ease infinite;
+    animation: GradientEffect 5s ease infinite;
+}
+
+@-webkit-keyframes GradientEffect {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes GradientEffect {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes GradientEffect {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
