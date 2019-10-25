@@ -21,7 +21,15 @@
 <script>
 
   $(document).ready(function () {
+    $(window).scroll(function (event) {
+      var scroll = $(window).scrollTop();
 
+      if (scroll !== 0) {
+        $('.arrow').fadeOut()
+      } else {
+        $('.arrow').fadeIn()
+      }
+    })
   })
 
 </script>
@@ -131,8 +139,9 @@
     sume de a poco en el beso. Y una vez consumido entero, su lengua se convierte en colchón, su paladar en frazada,
     abro los ojos y estoy en mi cama.
 
-    <span class="signature">@GILPEROPIOLA</span>
   </div>
+
+  <div class="signature">@GILPEROPIOLA</div>
 </body>
 
 </html>
