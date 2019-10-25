@@ -73,3 +73,82 @@
         line-height: 10em;
     }
 }
+
+
+/* 750 */
+@media (max-width: 750px) {
+    .less750fjallaOne {
+        font-family: "Fjalla One";
+    }
+
+    .less750bitter {
+        font-family: "Bitter";
+    }
+
+    .less750fontSmall {
+        font-size: 14px;
+    }
+
+    .less750fontMedium {
+        font-size: 24px;
+    }
+
+    .less750fontMediumBig {
+        font-size: 28px;
+    }
+
+    .less750fontBig {
+        font-size: 32px;
+    }
+
+    .less750fontHuge {
+        font-size: 42px;
+    }
+
+    .less750fontEnormous {
+        font-size: 72px;
+    }
+
+    .less750bold {
+        font-weight: bold;
+    }
+
+    /* in-depth */
+
+    .less750font10 {
+        font-size: 10px;
+    }
+
+    .less750font12 {
+        font-size: 12px;
+    }
+
+    .less750font14 {
+        font-size: 14px;
+    }
+
+    .less750font16 {
+        font-size: 16px;
+    }
+
+    .less750font18 {
+        font-size: 18px;
+    }
+
+    .less750font20 {
+        font-size: 20px;
+    }
+
+    .less750uppercase {
+        text-transform: uppercase;
+    }
+
+    .less750lowercase {
+        text-transform: lowercase;
+    }
+
+    .less750lineHeight10 {
+        line-height: 10em;
+    }
+}
+

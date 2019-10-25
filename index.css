@@ -40,3 +40,9 @@ body {
 .tabSelected {
     font-family: "Comic";
 }
+
+@media screen and (max-height: 550px) {
+    .landscapeHalfHeight {
+        height: 50%!important;
+    }
+}
