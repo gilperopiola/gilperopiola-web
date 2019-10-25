@@ -1,0 +1,75 @@
+@media (max-width: 1100px) {
+    .less1100fjallaOne {
+        font-family: "Fjalla One";
+    }
+
+    .less1100bitter {
+        font-family: "Bitter";
+    }
+
+    .less1100fontSmall {
+        font-size: 14px;
+    }
+
+    .less1100fontMedium {
+        font-size: 24px;
+    }
+
+    .less1100fontMediumBig {
+        font-size: 28px;
+    }
+
+    .less1100fontBig {
+        font-size: 32px;
+    }
+
+    .less1100fontHuge {
+        font-size: 42px;
+    }
+
+    .less1100fontEnormous {
+        font-size: 72px;
+    }
+
+    .less1100bold {
+        font-weight: bold;
+    }
+
+    /* in-depth */
+
+    .less1100font10 {
+        font-size: 10px;
+    }
+
+    .less1100font12 {
+        font-size: 12px;
+    }
+
+    .less1100font14 {
+        font-size: 14px;
+    }
+
+    .less1100font16 {
+        font-size: 16px;
+    }
+
+    .less1100font18 {
+        font-size: 18px;
+    }
+
+    .less1100font20 {
+        font-size: 20px;
+    }
+
+    .less1100uppercase {
+        text-transform: uppercase;
+    }
+
+    .less1100lowercase {
+        text-transform: lowercase;
+    }
+
+    .less1100lineHeight10 {
+        line-height: 10em;
+    }
+}

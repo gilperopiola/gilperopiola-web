@@ -47,14 +47,13 @@ body {
 .signature {
     font-size: 28px;
     float: right;
-    color: #ff9d00;
+    color: #854ba7;
 }
 
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
     .title {
-        font-size: 112px;
-        line-height: 550%;
+        font-size: 100px;
+        line-height: 580%;
     }
 
     .paragraph {
@@ -66,13 +65,29 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 800px) {
     .title {
-        font-size: 82px;
-        line-height: 550%;
+        font-size: 72px;
+        line-height: 830%;
     }
 
     .paragraph {
         font-size: 26px;
+    }
+
+    .signature {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 48px;
+        line-height: 1250%;
+    }
+
+    .paragraph {
+        font-size: 22px;
     }
 }
