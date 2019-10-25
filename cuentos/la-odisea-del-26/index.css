@@ -89,7 +89,7 @@ body {
     }
 }
 
-@media screen and (max-height: 655px) {
+@media screen and (max-height: 655px) and (min-width: 1600px) {
     .title {
         line-height: 300%;
     }
