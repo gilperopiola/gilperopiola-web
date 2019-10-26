@@ -1,0 +1,96 @@
+html {
+    height: 100%;
+}
+
+body {
+	font-family: Fjalla One;
+    background-color: #4e1fbd; 
+    text-align: center;
+    margin: 0;
+    height: 100%;
+}
+
+.wholeScreen {
+    height: 100%;
+    background: url("background.jpg");
+    background-size: cover;
+}
+
+.title {
+    font-size: 148px;
+    line-height: 400%;
+    color: white;
+}
+
+.arrow {
+    width: 12.5%;
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.paragraph {
+    font-size: 48px;
+    text-align: justify;
+    padding: 36px;
+    line-height: 1.4em;
+    color: #dedede;
+}
+
+.paragraph:nth-child(even) {
+    background-color: #542eac;
+}
+
+.paragraph:nth-child(odd) {
+    background-color: #2e2a2a;
+}
+
+.signature {
+    font-size: 28px;
+    float: left;
+    color: #000000;
+    margin: 8px;
+}
+
+@media screen and (max-width: 1100px) {
+    .title {
+        font-size: 100px;
+        line-height: 580%;
+    }
+
+    .paragraph {
+        font-size: 32px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .title {
+        font-size: 72px;
+        line-height: 830%;
+    }
+
+    .paragraph {
+        font-size: 26px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 48px;
+        line-height: 1250%;
+    }
+
+    .paragraph {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-height: 655px) and (min-width: 700px) {
+    .title {
+        line-height: 300%;
+    }
+}

@@ -10,6 +10,60 @@ body {
     height: 100%;
 }
 
+.bg {
+    background: url("bg.jpg");
+    background-size: cover;
+}
+
+.bg26 {
+    background: url("./cuentos/la-odisea-del-26/background.jpg");
+    background-size: cover;
+    background-position-y: -282px;
+}
+.bgOral {
+    background: url("./cuentos/oral/background.jpg");
+    background-size: cover;
+    background-position-y: 435px;
+}
+.bgVladimir {
+    background: url("./cuentos/vladimir/background.jpg");
+    background-size: cover;
+    background-position-y: 300px;
+}
+.bgViejoAmor {
+    background: url("./cuentos/para-mi-viejo-amor/background.jpg");
+    background-size: cover;
+    background-position-y: 136px;
+}
+.bgTiempo {
+    background: url("./cuentos/tiempo/background.jpg");
+    background-size: cover;
+    background-position-y: 378px;
+}
+.bgHada {
+    background: url("./cuentos/hada-la-desencajada/background.jpg");
+    background-size: cover;
+    background-position-y: 232px;
+
+}
+.bgSteve {
+    background: url("./cuentos/el-dia-que-etc/background.jpg");
+    background-size: cover;
+    background-position-y: 319px;
+
+}
+.bgLilita {
+    background: url("./cuentos/lilita-cacarrio/background.jpg");
+    background-size: cover;
+    background-position-y: 257px;
+
+}
+.bgFasitoInca {
+    background: url("./cuentos/fasito-inca/background.jpg");
+    background-size: cover;
+    background-position-y: 280px;
+}
+
 .wholeScreen {
     height: 100%;
     background: url("background.jpg");
@@ -44,5 +98,18 @@ body {
 @media screen and (max-height: 550px) {
     .landscapeHalfHeight {
         height: 50%!important;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .bgOral {
+        background-position-y: 330px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .bg26 {
+        background-position-y: -190px;
+    }
+    .bgHada {
+        background-position-y: 170px;
     }
 }
