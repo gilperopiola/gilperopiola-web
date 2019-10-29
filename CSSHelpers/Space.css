@@ -89,10 +89,6 @@
     padding-top: 16px;
 }
 
-.pad16 {
-    padding: 16px;
-}
-
 .padLeft24 {
     padding-left: 24px;
 }
@@ -248,6 +244,10 @@
 
 .marTop16 {
     margin-top: 16px;
+}
+
+.mar16 {
+    margin: 16px;
 }
 
 .marH16 {

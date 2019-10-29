@@ -102,6 +102,10 @@
     min-height: 80px;
 }
 
+.minWidth300 {
+    min-width: 300px;
+}
+
 .maxWidth300 {
     max-width: 300px;
 }

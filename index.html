@@ -19,7 +19,6 @@
 
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
   <link href="BebasNeue.ttf" rel="stylesheet">
-  <link href="ComicSans.ttf" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -34,6 +33,7 @@
 
   $(document).ready(function () {
 
+    /* hover entry */
     $('.entry').hover(function () {
       let readLabel = $(this).children(".fifthWidth")
       readLabel.fadeIn(150)
@@ -42,6 +42,7 @@
       readLabel.fadeOut(150)
     })
 
+    /* hover tab */
     $('.tab').hover(function () {
       let classesArray = $(this).attr('class').split(/\s+/)
 
@@ -62,6 +63,7 @@
       $(this).removeClass("pointer")
     })
 
+    /* hover click */
     $('.tab').on("click", function () {
       $('.tab').each(function () {
         $(this).removeClass("tabSelected")
@@ -90,6 +92,29 @@
           break
       }
     })
+
+
+    /* poem click */
+    $('.poemHeader').on('click', function () {
+      $(this).next().slideToggle(300)
+    })
+
+    /* send mail */
+    $('#sendMailButton').on('click', function () {
+      $.ajax({
+        type: "POST",
+        url: "http://localhost:8067/v1/SendMail",
+        data: JSON.stringify({
+          "to": "ferra.main@gmail.com",
+          "subject": "Mensaje anónimo de gilperopiola.com!",
+          "html": "<html><head><title>Mensaje anónimo</title></head><body><div>" + $('#anonymousMessage').val() + "</div></body></html>"
+        }),
+        success: function () { alert("Mensaje enviado!") },
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+      })
+    })
+
   })
 
 </script>
@@ -103,8 +128,7 @@
     <div class="right fullWidth alignRight">
       <h1 class="white fontHuge inlineBlock less1100fontMediumBig less750fontSmall tab tabSelected">CUENTOS</h1>
       <h1 class="white fontHuge marH32 inlineBlock less1100fontMediumBig less750fontSmall less750marH8 tab">POEMAS</h1>
-      <h1 class="white fontHuge marRight40 inlineBlock less1100fontMediumBig less750fontSmall tab">
-        GILADAS</h1>
+      <h1 class="white fontHuge marRight40 inlineBlock less1100fontMediumBig less750fontSmall tab">GILADAS</h1>
     </div>
   </div>
 
@@ -112,7 +136,7 @@
 
   <div id="cuentos">
     <div onclick="window.location.assign('./cuentos/la-odisea-del-26')"
-      class="entry height80 alignVertical alignLeft pointer bg26" style="background-color: #2e2a2a;">
+      class="entry height80 alignVertical alignLeft pointer hoverBrightness bg26" style="background-color: #2e2a2a;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: white;">LA ODISEA DEL 26</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
@@ -120,7 +144,7 @@
       </div>
     </div>
     <div onclick="window.location.assign('./cuentos/oral')"
-      class="entry height80 alignVertical alignLeft pointer bgOral" style="background-color: #f1f1f1;">
+      class="entry height80 alignVertical alignLeft pointer hoverBrightness bgOral" style="background-color: #f1f1f1;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #e21313;">ORAL</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
@@ -128,7 +152,8 @@
       </div>
     </div>
     <div onclick="window.location.assign('./cuentos/vladimir')"
-      class="entry height80 alignVertical alignLeft pointer bgVladimir" style="background-color: #7e0707;">
+      class="entry height80 alignVertical alignLeft pointer hoverBrightness bgVladimir"
+      style="background-color: #7e0707;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #f0c6c6;">VLADIMIR</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
@@ -136,7 +161,8 @@
       </div>
     </div>
     <div onclick="window.location.assign('./cuentos/para-mi-viejo-amor')"
-      class="entry height80 alignVertical alignLeft pointer bgViejoAmor" style="background-color: #32198f;">
+      class="entry height80 alignVertical alignLeft pointer hoverBrightness bgViejoAmor"
+      style="background-color: #32198f;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig " style="color: #d29df1;">PARA MI VIEJO AMOR</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
@@ -144,7 +170,8 @@
       </div>
     </div>
     <div onclick="window.location.assign('./cuentos/tiempo')"
-      class="entry height80 alignVertical alignLeft pointer bgTiempo" style="background-color: #541e77;">
+      class="entry height80 alignVertical alignLeft pointer hoverBrightness bgTiempo"
+      style="background-color: #541e77;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #21c46a;">TIEMPO</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
@@ -152,7 +179,7 @@
       </div>
     </div>
     <div onclick="window.location.assign('./cuentos/hada-la-desencajada')"
-      class="entry height80 alignVertical alignLeft pointer bgHada" style="background-color: #649ee0;">
+      class="entry height80 alignVertical alignLeft pointer hoverBrightness bgHada" style="background-color: #649ee0;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: rgb(205, 236, 248);">HADA LA
         DESENCAJADA</h1>
 
@@ -161,7 +188,7 @@
       </div>
     </div>
     <div onclick="window.location.assign('./cuentos/el-dia-que-etc')"
-      class="entry height80 alignVertical alignLeft pointer bgSteve" style="background-color: #eb4a34;">
+      class="entry height80 alignVertical alignLeft pointer hoverBrightness bgSteve" style="background-color: #eb4a34;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less1100fontMedium  less750fontSmall" style="color: #f57328;">EL DÍA
         QUE SALÍ A CAGAR
         GENTE A PALOS CON
@@ -173,7 +200,8 @@
       </div>
     </div>
     <div onclick="window.location.assign('./cuentos/lilita-cacarrio')"
-      class="entry height80 alignVertical alignLeft pointer bgLilita" style="background-color: #dfe231;">
+      class="entry height80 alignVertical alignLeft pointer hoverBrightness bgLilita"
+      style="background-color: #dfe231;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #161010;">LILITA
         CACARRIÓ</h1>
 
@@ -182,7 +210,8 @@
       </div>
     </div>
     <div onclick="window.location.assign('./cuentos/fasito-inca')"
-      class="entry height80 alignVertical alignLeft pointer bgFasitoInca" style="background-color: #3f9e3c;">
+      class="entry height80 alignVertical alignLeft pointer hoverBrightness bgFasitoInca"
+      style="background-color: #3f9e3c;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #f5dfcff6;">FASITO INCA</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
@@ -191,9 +220,9 @@
     </div>
   </div>
 
-
   <div id="poemas" style="display: none">
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #ac1793;">
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #ac1793;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #f8f8f8f6;">EL TERRIVIAJE</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
@@ -201,55 +230,152 @@
       </div>
     </div>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #a58736;">
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #96077e;">
+      viajemos sin viajar a algún lugar en nuestra mente </br>
+      en donde el agua fluya arriba y en zigzag como serpiente </br>
+      donde vivan las sirenas, correteando en la corriente </br>
+      cristalina y transparente cual mis besos en tu frente. </br></br>
+
+      hacele frente, dale que ya la siento está subiendo estás demente </br>
+      y flashamos con volar por la ciudad en parapente esquivando este cemento </br>
+      que cementa las ideas que las quema que las mata porque piensan diferente. </br></br>
+
+      y ya se siente, estamos bien arriba bien sumidos en el viaje olvidando el equipaje y charlando con un ente sin
+      pasado sin presente sin futuro, sin tus besos no soy nada y en la nada está re oscuro (cuando no estoy en el
+      viaje), y este viaje se repite se recicla se reinventa deja atrás la rima simple y se convierte simplemente aquí
+      en tormenta,
+      nuestro barco se lamenta, nuestro barco que es mi cama y que a las tres de la mañana fue testigo de otro viaje,
+      besos pagan el peaje y voy a mil por la autopista, aterrizando ya en la pista que es tu ombligo que es tu cuerpo
+      paro y sigo y desemboco liberando los estribos en tu boca que me toca y que me engulle paro y fluye y mi cordura
+      se destruye por completo y quedo quieto en tu espesura retornando a la mesura y acallando esta tormenta.</br></br>
+
+      Myriam Bregman presidenta.
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #a58736;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #f8f8f8f6;">PRISIÓN DE TELA</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #8c7024;">
+      Despierto cada día junto a mi piel correteando libre sobre las sábanas. Revoloteando piruetas mágicas por sobre el
+      aire, deslizándose imposiblemente sobre el oxígeno y la nada misma. En tanto piel, siendo y sintiendo y por qué no
+      sabiendo la prisión que se avecina. </br> </br>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #34be4b;">
+      Y entre etiquetas me aprisiono. Me pongo yo mismo barrotes, me cierro con llave, me coarto ser libre
+      hipocríticamente al salir de mi casa, es el frío que arrasa. </br> </br>
+
+      Y voy y vuelvo. </br> </br>
+
+      Y chau bufanda chau campera el cuello empieza a respirar. Chau bucito pantalones remerita y los calzones que mi
+      cuerpo está empezando a respirar. Chau caretas falsedades chau responsabilidades, que mi ser y mi existencia
+      aprisionados con violencia están radiando y empezando a respirar. </br> </br>
+
+      Pero las medias, las medias... no se discuten.
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #34be4b;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #236b2ff6;">LA MUJER TAUTOLOGÍA</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #24a53a;">
+      Lucía Lucía la mujer tautología </br>
+      vivía con la hermana de su madre: su tía </br>
+      hasta que un día se apropió de mi casa, que era mía. </br> </br>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #b13a16;">
+      En la terraza, arriba de mi casa ella vivía </br>
+      bajo el sol y las estrellas (y aunque forme parte de ellas) </br>
+      bajo el cielo que está arriba y sobre el piso que está abajo </br>
+      sin laburo ni trabajo: ni trabajo ella tenía. </br> </br>
+
+      Y es por eso que Lucía, en su final tautología </br>
+      comenzó su muerte cuando terminó su vida.
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #b13a16;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #3f0505f6;">LABIOS DE TUCA</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #923012;">
+      Labios de tuca de flores añejas </br>
+      Me prendo tus ojos me miran tus cejas </br>
+      Tu piel se resbala se quema se arde </br>
+      Qué importa si es tarde yo quiero tus secas
+    </div>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #3b0f6d;">
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #3b0f6d;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #f8f8f8f6;">DEVENIR</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: rgb(43, 12, 78);">
+      Cuando el amor deviene obsesión </br>
+      Y la obsesión deviene en ruptura </br>
+      Vos galopás mi verga dura </br>
+      Y juntocamos la locura
+    </div>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #cc7dbf;">
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #cc7dbf;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #000000f6;">CONI CONITA</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #c168b3;">
+      Coni Conita, tu cara bonita </br>
+      Se mece en el cese del aire que ejerce </br>
+      Presión en mi pecho, estrecho es el lecho </br>
+      Que mira y respira, envuelto en canción </br>
+      Que canta el latido de mi corazón, </br>
+      Que baila al compás de este jazz que me das </br>
+      Cuando abrís y cerrás en un grito fugaz </br>
+      Tus labios, y escabio tu néctar, voraz </br>
+      Licuás y dejás a mi as sin momentos de paz </br>
+      Arrasás con tu cuerpo mi cuerpo, </br>
+      Elevás con tu alma mi alma, </br>
+      Disparo mi arma y es calma el momento perfecto </br>
+      No existe intelecto o razón </br>
+      No existe ni tiempo ni imaginación </br>
+      Es tu don, corazón, y jadeante </br>
+      Pretende un latido encontrar a su amante </br>
+      Pretende y lo alcanza </br>
+      Y yacés en mi panza, al fin de tu danza </br>
+      Tu cuerpo mi droga y vos Coni, mi transa.
+    </div>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #78ac17;">
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #78ac17;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #0c0505f6;">SOY GILPEROPIOLA</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #689612;">
+      Soy gilperopiola y surfeando mi ola te pido una C y estaciono en tu cola. </br>
+      Soy gilperopi, soy irracional, qué fácil quedó el chiste del sexo anal. </br>
+      Soy gilpero, pero te espero y vos nada, cero. </br>
+      Soy gil y te quiero.
+    </div>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #68295d;">
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #68295d;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #f8f8f8f6;">EL REINO DEL REINO DE PIPA
         NOVENA</h1>
 
@@ -257,37 +383,82 @@
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #501c47;">
+      El reino del reino de Pipa Novena </br>
+      Es un reino del reino en donde la cena </br>
+      Se come tus penas, apenas pensadas, </br>
+      Luego de luego de un duelo de espadas </br>
+      A tres estocadas, a menos que mezcles polvo de hadas, </br>
+      Pomelas rosadas y un toque de cal, arena y arena y arena y sal, </br>
+      Y digas me apena que solo por pena en el reino del reino de Pipa Novena </br>
+      Ya tenga condena, la cena se frena y la pena la come, la muerde la arranca </br>
+      La rompe la escupe la lanza destroza destruye le tira 3 bombas nucleares, qué pena qué pena qué pena mi cena.
+    </div>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #2b67b4;">
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #2b67b4;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #1f0a0af6;">CARLOTA LA GOTA</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #225392;">
+      Carlota la gota cayó en mi ventana, </br>
+      Sola, solita, sin ninguna hermana </br>
+      De miles, millones, más que hermanas clones </br>
+      Que sin pantalones salen a jugar </br>
+      Que aún sin razones empapan y mojan y limpian y sanan </br>
+      Inspiran, resbalan, y es loco el azar, que por cielo y no mar </br>
+      A la gota Carlota, atrás de este idiota la vino a posar. </br>
+    </div>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #db9442;">
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #db9442;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #632968f6;">NUDE DEL ALMA</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #b7782f;">
+      Te mando una nude </br> </br>
 
-    <div class="entry height80 alignVertical alignLeft pointer" style="background-color: #979296;">
+      Una nude del alma </br>
+      Una nude que alude al desnudo del nudo del alma, </br>
+      Una nude que es calma </br> </br>
+
+      Y esta nude, a su vez deja ver y entrever, a este ser </br>
+      Que me inspira, su boca una lira suspira palabras, mentira, suspira gorriones que vuelan y giran y multicolores y
+      llenos de flores impactan en mi corazón.
+    </div>
+
+    <div class="entry height80 alignVertical alignLeft pointer hoverBrightness poemHeader"
+      style="background-color: #979296;">
       <h1 class="fontHuge marLeft16 fourFifthsWidth less750fontBig" style="color: #fffffff6;">A VECES ESCRIBO</h1>
 
       <div class="alignRight fifthWidth" style="display: none">
         <h1 class="fontMediumBig marRight16 right white">LEER</h1>
       </div>
     </div>
+    <div class="white pad32 fontMedium lineHeight36px hidden" style="background-color: #797679;">
+      A veces escribo. A veces, no ahora. Bueno, en mi ahora en realidad sí, literalmente estoy presionando las teclas
+      en mi teclado, pero en tu ahora vos estás leyendo esto así que yo ya lo escribí, y en mi ahora estoy haciendo otra
+      cosa. Aunque esa cosa puede que también sea escribir, porque a veces escribo, y en ese caso sí escribo, a veces y
+      ahora.
+    </div>
   </div>
 
-
-
-
   <div id="giladas" style="display: none">
+    <span class="white fontBig mar16 block less750fontMediumBig">No sé qué giladas subir todavía o qué va a ser esta
+      sección, pero podés
+      dejarme un
+      mensaje anónimo.</span>
 
+    <input id="anonymousMessage" class="noBorder square fourFifthsWidth marHAuto height60 fjallaOne fontBig pad16"
+      placeholder="BARDEAME SI TE ANIMÁS, GIL" />
+    <button id="sendMailButton" style="background-color: #1975ff"
+      class="noBorder square fifthWidth minWidth300 marHAuto height60 fjallaOne fontBig pointer white marTop16 hoverBrightness">ENVIAR</button>
   </div>
 
 </body>
