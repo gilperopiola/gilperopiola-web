@@ -103,7 +103,7 @@
     $('#sendMailButton').on('click', function () {
       $.ajax({
         type: "POST",
-        url: "http://localhost:8067/v1/SendMail",
+        url: "http://gilperopiola.com:9004/v1/SendMail",
         data: JSON.stringify({
           "to": "ferra.main@gmail.com",
           "subject": "Mensaje anónimo de gilperopiola.com!",
